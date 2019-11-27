@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 27, 2019 at 10:38 AM
+-- Generation Time: Nov 27, 2019 at 03:30 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -78,12 +78,12 @@ CREATE TABLE IF NOT EXISTS `songs` (
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(200) NOT NULL,
-  `last_name` varchar(200) NOT NULL,
+  `first_name` varchar(200) DEFAULT NULL,
+  `last_name` varchar(200) DEFAULT NULL,
   `mail` varchar(200) NOT NULL,
   `password` varchar(80) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -91,9 +91,13 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `mail`, `password`) VALUES
 (1, 'Buski', 'Lil', 'lil.buk@si.com', '123456'),
-(2, 'E', 'Asy', 'E.Z@email.ru', 'password'),
+(2, 'hello', 'Asy', 'E.Z@email.ru', 'password'),
 (3, 'Buski', 'Lil', 'lil.buk@si.com', '123456'),
-(4, 'E', 'Asy', 'E.Z@email.ru', 'password');
+(4, 'E', 'Asy', 'E.Z@email.ru', 'password'),
+(5, NULL, NULL, '?', '?'),
+(6, NULL, NULL, 'jiji@jiji.jiji', '$2y$10$tqaf4zgFqWeIxo3BrpoQPeGci6r1qqhev1mp9b8.kQFnWP8uxJ6Zy'),
+(7, NULL, NULL, 'new@new.com', '$2y$10$4YtAIwqmj7Fn7y8VuA4lIOCWy5NvYUZoGQe.LI.kY9myOctsoruxq'),
+(8, 'Not', 'true', 'dede@dede.dede', 'dede');
 
 --
 -- Constraints for dumped tables
