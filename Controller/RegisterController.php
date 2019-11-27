@@ -9,7 +9,6 @@ if (isset($_POST['submit'])) {
     $mail = $_POST['mail'];
     $password = $_POST['password'];
 
-    $hashPassword = password_hash($password, PASSWORD_DEFAULT);
     $sanitizeMail = filter_var($_POST['mail'], FILTER_SANITIZE_STRING);
     $checkEmail = filter_var($sanitizeMail, FILTER_VALIDATE_EMAIL);
 
@@ -21,7 +20,7 @@ if (isset($_POST['submit'])) {
         echo 'You must enter a valid email';
     }else{
         if(checkEmailMatch($checkEmail)){
-            register($checkEmail,$hashPassword);
+            register($checkEmail,$password);
         } else{
             echo'This email is already used sorry bro';
         }

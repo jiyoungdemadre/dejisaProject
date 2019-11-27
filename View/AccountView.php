@@ -1,5 +1,5 @@
 <?php 
-
+include 'menu.html';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +13,11 @@
     <div>
         <form method="POST">
             <label for="firstname">Firstname</label> <br>
-                <input type="text" name="firstname" value="<?php echo $currentUser->getFirst_name ?>"><br>
+                <input type="text" name="firstname" value="<?php echo $currentUser->getFirst_name(); ?>"><br>
             <label for="lastname">Last Name</label><br>
-                <input type="text" name="lastname" value="<?php echo $currentUser->getlast_name ?>"><br>
+                <input type="text" name="lastname" value="<?php echo $currentUser->getLast_name(); ?>"><br>
             <label for="email">Email Address</label><br>
-                <input type="text" name="email" value="<?php echo $currentUser->getmail ?>"><br>
+                <input type="text" name="email" value="<?php echo $currentUser->getMail(); ?>"><br>
             <input type="submit" name="editProfile" value="Edit">
             </form>
 
