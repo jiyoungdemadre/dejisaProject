@@ -1,5 +1,6 @@
 <?php
-require_once'Model/RegisterModel.php';
+require_once 'View/register.php';
+require_once 'Model/RegisterModel.php';
 
 $mail = "" ;
 $password = "" ;
