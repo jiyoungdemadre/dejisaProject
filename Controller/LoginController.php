@@ -7,7 +7,7 @@ $connect = loginTo('lil.buk@si.com', '123456');
 var_dump($connect);
 if ($connect) {
     $_SESSION['id'] = $connect['user_id'];
-    header("Location: index.php?page=account");
+    header("Location: ?page=account");
 }
 
 include_once 'View/LoginView.php';
