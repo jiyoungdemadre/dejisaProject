@@ -14,8 +14,8 @@
   <h1>Registration Page</h1>
   <br>
   <form action="" method="post">
-    <input type="text" name="mail" value="<?php echo $mail ?>"><br>
-    <input type="password" name="password" value="<?php echo $password ?>"><br>
+    <input type="text" name="mail" placeholder="Enter your email" ><br>
+    <input type="password" name="password" placeholder="Enter your password"><br>
     <input type="submit" name="submit" value="Register">
   </form>
 </body>
