@@ -1,10 +1,10 @@
 <?php
-require_once'RegisterModel.php';
+require_once 'RegisterModel.php';
 
-$mail = "" ;
-$password = "" ;
+$mail = "";
+$password = "";
 
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     $mail = $_POST['mail'];
     $password = $_POST['password'];
 
@@ -18,13 +18,11 @@ if(isset($_POST['submit'])){
     } elseif (!$sanitizeMail) {
         // Check if the mail is ok
         echo 'You must enter a valid email';
-    }else{
-        if(checkEmailMatch($sanitizeMail)){
-            register($sanitizeMail,$hashPassword);
-        } else{
-            echo'This email is already used sorry bro';
+    } else {
+        if (checkEmailMatch($sanitizeMail)) {
+            register($sanitizeMail, $hashPassword);
+        } else {
+            echo 'This email is already used sorry bro';
         }
-        
     }
 }
-
