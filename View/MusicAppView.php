@@ -12,6 +12,7 @@
     <?php
     include_once 'menu.html';
     // Display the movies
+    
     foreach ($users as $user) {
         echo '<div>';
         echo $user->getFirst_name() . '<br>';
