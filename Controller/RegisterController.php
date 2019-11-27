@@ -1,5 +1,5 @@
 <?php
-require_once'RegisterModel.php';
+require_once'Model/RegisterModel.php';
 
 $mail = "" ;
 $password = "" ;
