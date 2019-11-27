@@ -6,4 +6,7 @@ class Artist{
     private $bio;
     private $gender;
     private $date_of_birth;
+    private $songs;
+
+    
 }

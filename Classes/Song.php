@@ -6,8 +6,7 @@ class Song{
     private $release_date;
     private $categ_id;
     private $artist_id;
-
-    
+   
 
 
     /**
