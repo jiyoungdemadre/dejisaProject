@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
-</head>
-
 <body>
+
     <?php
     include_once 'menu.html';
-    // Display the movies
-    
-    foreach ($users as $user) {
-        echo '<div>';
-        echo $user->getFirst_name() . '<br>';
-        echo $user->getLast_name() . '<br>';
-        echo $user->getMail() . '<br>';
-        ?>
-    <?php
-
-        echo '</div>';
-        echo '<hr>';
-    }
-
-
     ?>
-
+    <h1>Title of the PAGGGE</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugit eligendi neque labore, molestias nulla ullam et possimus nobis error obcaecati. Minima neque accusamus eius est nihil, repudiandae perferendis? Aliquid!</p>
 
 </body>
-
-</html>
