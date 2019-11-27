@@ -2,7 +2,7 @@
 
 function myAutoloader($class)
 {
-    require_once '../Classes/' . $class . '.php';
+    require_once 'Classes/' . $class . '.php';
 }
 spl_autoload_register('myAutoloader');
 
