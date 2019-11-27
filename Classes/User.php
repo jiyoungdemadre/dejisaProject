@@ -9,7 +9,6 @@ class User
     private $password;
 
 
-
     
 
 
