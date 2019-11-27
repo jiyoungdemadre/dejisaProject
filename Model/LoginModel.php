@@ -6,6 +6,8 @@ require_once 'MusicAppModel.php';
 function loginTo($email, $password)
 {
     $db = connectDB();
-    $connect = $db->query('SELECT user_id FROM users WHERE mail="' . $email . '" AND password="' . $password . '"');
-    return  $connect->fetch(PDO::FETCH_ASSOC);
+    $user = $db->query('SELECT * FROM users WHERE mail="' . $email . '" AND password="' . $password . '"LIMIT 1');
+    $user->setFetchMode(PDO::FETCH_CLASS, 'User');
+    $final = $user->fetch();
+    return $final;
 }

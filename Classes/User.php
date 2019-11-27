@@ -8,66 +8,61 @@ class User
     private $mail;
     private $password;
 
-
     
 
 
-public function getUser_id()
+
+    public function getUser_id()
     {
         return $this->user_id;
     }
 
-public function setUser_id($user_id)
+    public function setUser_id($user_id)
     {
         $this->user_id = $user_id;
-
     }
 
 
-public function getFirst_name()
+    public function getFirst_name()
     {
         return $this->first_name;
     }
 
-public function setFirst_name($first_name)
+    public function setFirst_name($first_name)
     {
         $this->first_name = $first_name;
-
     }
 
 
-public function getLast_name()
+    public function getLast_name()
     {
         return $this->last_name;
     }
 
-public function setLast_name($last_name)
+    public function setLast_name($last_name)
     {
         $this->last_name = $last_name;
-
     }
 
 
-public function getPassword()
+    public function getPassword()
     {
         return $this->password;
     }
 
-public function setPassword($password)
+    public function setPassword($password)
     {
         $this->password = $password;
-
     }
 
 
-public function getMail()
+    public function getMail()
     {
         return $this->mail;
     }
 
-public function setMail($mail)
+    public function setMail($mail)
     {
         $this->mail = $mail;
-
     }
 }
