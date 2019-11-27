@@ -71,4 +71,22 @@ public function setMail($mail)
         $this->mail = $mail;
 
     }
+
+public function editProfile($firstName,$lastName,$mail,$id){
+
+    $pdo = new PDO('mysql:host=localhost;dbname=music_app;charset=utf8', 'root', '');
+
+    $editprofile = $pdo->prepare("UPDATE users SET first_name = ?, last_name = ?, mail = ? WHERE user_id = ?");
+
+    $editprofile->bindParam(1,$firstName);
+    $editprofile->bindParam(2,$lastName);
+    $editprofile->bindParam(3,$mail);
+    $editprofile->bindParam(4,$id);
+
+    if($editprofile->rowCount()>0){
+        return 'No Update';
+    }else{
+        return 'Profile updated';
+    }
+}
 }
